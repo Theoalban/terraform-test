@@ -19,7 +19,7 @@ pipeline {
         }
      stage('plan') {
             steps {
-                sh 'terraform plan -no-color -desrtoy'
+                sh 'terraform plan -no-color -destroy'
             }
         }
     }        
