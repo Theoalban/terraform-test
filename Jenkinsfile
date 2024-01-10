@@ -19,17 +19,7 @@ pipeline {
         }
      stage('plan') {
             steps {
-                sh 'terraform plan'
-            }
-        }
-        stage('apply') {
-            steps {
-                sh 'terraform apply --auto-approve'
-            }
-        }
-        stage('desroy') {
-            steps {
-                sh 'terraform destroy --auto-approve'
+                sh 'terraform plan -desrtoy'
             }
         }
     }        
