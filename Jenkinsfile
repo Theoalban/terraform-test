@@ -4,22 +4,22 @@ pipeline {
     stages {
         stage('initialize') {
             steps {
-                sh 'terraform init'
+                sh 'terraform init -no-color'
             }
         }
         stage('format the code') {
             steps {
-               sh 'terraform fmt'
+               sh 'terraform fmt -no-color'
             }
         }
          stage('validate') {
             steps {
-                sh 'terraform validate'
+                sh 'terraform validate -no-color'
             }
         }
      stage('plan') {
             steps {
-                sh 'terraform plan -desrtoy'
+                sh 'terraform plan -no-color -desrtoy'
             }
         }
     }        
